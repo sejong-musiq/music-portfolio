@@ -1,63 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>음악 포트폴리오</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: linear-gradient(to right, #1d1e22, #2c2f36);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    section {
+      width: 100%;
+    }
+
+    /* 인트로 섹션 */
+    #welcome {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    #welcome h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    #welcome p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    #welcome button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background: #ff5e62;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #welcome button:hover {
+      background: #ff1e2d;
+    }
+
+    /* 메인 콘텐츠 */
+    #main {
+      display: none;
+      padding: 2rem 1rem;
+      animation: fadeIn 1s ease-in forwards;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card {
+      background: linear-gradient(145deg, #2c2f36, #3a3e48);
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #ff6f61;
+    }
+
+    .card iframe {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    /* 팀 소개 섹션 */
+    .about {
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    .about img {
+      max-width: 180px;
+      border-radius: 50%;
+      margin-top: 1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    @media (max-width: 600px) {
+      #welcome h1 {
+        font-size: 2rem;
+      }
+      .card iframe {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
 <body>
-    <!-- 네비게이션 메뉴 -->
-    <nav>
-      <ul>
-        <li><a href="#portfolio">포트폴리오</a></li>
-        <li><a href="#about">작곡팀 소개</a></li>
-      </ul>
-    </nav>
-  
-    <!-- 헤더 -->
-    <header>
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-      <h1>내 음악 포트폴리오</h1>
-      <p>나의 음악과 비디오를 즐겨보세요!</p>
-    </header>
-  
-    <!-- 포트폴리오 섹션 -->
-    <section class="portfolio" id="portfolio">
-      <div class="portfolio-item fade-in delay-1" style="background: linear-gradient(135deg, #ff9a9e, #fad0c4);">
-        <img src="https://via.placeholder.com/400x250" alt="곡 이미지">
-        <h2>곡 제목 1</h2>
-        <div class="audio">
-          <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://soundcloud.com/trending-music-kr/sets/latin?si=b971157ce3a04d39a20319485cb16dbf&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"></iframe>
-        </div>
-        <div class="video">
-          <iframe width="100%" height="200" src="https://youtube.com/shorts/J60FIhIyiNg?si=NajvXdU8ejlbPzbn" frameborder="0"
-            allowfullscreen></iframe>
-        </div>
-        <button class="btn">자세히 보기</button>
+
+  <!-- 인트로 페이지 -->
+  <section id="welcome">
+    <h1>🎵 Welcome to Our Music World</h1>
+    <p>감각적인 사운드로 감정을 디자인합니다.</p>
+    <button onclick="enterSite()">Enter</button>
+  </section>
+
+  <!-- 메인 포트폴리오 -->
+  <section id="main">
+    <div class="portfolio-grid">
+
+      <!-- 포트폴리오 카드 1 -->
+      <div class="card" style="background: linear-gradient(to right, #ff9966, #ff5e62);">
+        <img src="https://i.imgur.com/W2mD9RP.jpg" alt="Track 1 이미지">
+        <h3>Track 1: Nostalgia</h3>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123456789&color=%23ff5500&auto_play=false"></iframe>
       </div>
-  
-      <div class="portfolio-item fade-in delay-2" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);">
-        <img src="https://via.placeholder.com/400x250" alt="곡 이미지">
-        <h2>곡 제목 2</h2>
-        <div class="audio">
-          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1734890244&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-        </div>
-        <div class="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/QrSWJhX8vuI?si=8PaKKAwpBXY8Wo0p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <button class="btn">자세히 보기</button>
+
+      <!-- 카드 2 -->
+      <div class="card" style="background: linear-gradient(to right, #56ccf2, #2f80ed);">
+        <img src="https://i.imgur.com/jT7rYhV.jpg" alt="Track 2 이미지">
+        <h3>Track 2: Dreamscape</h3>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/MvMWlc6_QF_nPfd3"
+          frameborder="0" allowfullscreen></iframe>
       </div>
-  
-      <!-- 다른 곡들도 같은 방식으로 추가 -->
-    </section>
-  
-    <!-- 작곡팀 소개 -->
-    <section class="composer-info" id="about">
-      <div class="composer-text">
-        <h3>작곡팀 소개</h3>
-        <p>작곡팀의 열정과 철학을 담았습니다. 다양한 장르를 넘나드는 창의력과 사운드를 기반으로 감동을 전달합니다.</p>
+
+      <!-- 카드 3 -->
+      <div class="card" style="background: linear-gradient(to right, #c471f5, #fa71cd);">
+        <img src="https://i.imgur.com/2DlJ3VQ.jpg" alt="Track 3 이미지">
+        <h3>Track 3: Rhythm Rush</h3>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/987654321&color=%23ff5500&auto_play=false"></iframe>
       </div>
-      <div class="composer-image">
-        <img src="https://via.placeholder.com/400x250" alt="작곡팀 이미지">
+
+      <!-- 카드 4 -->
+      <div class="card" style="background: linear-gradient(to right, #f2994a, #f2c94c);">
+        <img src="https://i.imgur.com/d1JGR7K.jpg" alt="Track 4 이미지">
+        <h3>Track 4: Sunset Vibes</h3>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/A2zKARkpDW4"
+          frameborder="0" allowfullscreen></iframe>
       </div>
-    </section>
-  
-    <!-- 푸터 -->
-    <footer>
-      <p>&copy; 2025 내 음악 포트폴리오</p>
-    </footer>
-  </body>
+
+    </div>
+
+    <!-- 팀 소개 -->
+    <div class="about">
+      <h2>🎹 About Our Team</h2>
+      <p>우리는 다양한 장르를 넘나들며 감정을 이끌어내는 사운드를 제작하는 팀입니다.</p>
+      <img src="https://i.imgur.com/OY5jQdk.jpg" alt="Team Image">
+    </div>
+  </section>
+
+  <script>
+    function enterSite() {
+      const welcome = document.getElementById('welcome');
+      const main = document.getElementById('main');
+
+      welcome.style.animation = 'fadeOut 0.8s forwards';
+      setTimeout(() => {
+        welcome.style.display = 'none';
+        main.style.display = 'block';
+        main.scrollIntoView({ behavior: 'smooth' });
+      }, 800);
+    }
+  </script>
+
+</body>
+</html>
