@@ -1,0 +1,154 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* 헤더 여백 조정 (네비 위에 위치했기 때문에) */
+header {
+    margin-top: 70px;
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: #fff;
+}
+
+/* 포트폴리오 카드 */
+.portfolio-item {
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #fff;
+    color: #333;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #ffd700;
+    color: #000;
+}
+
+/* 작곡팀 소개 */
+.composer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    border-radius: 16px;
+    margin: 60px 20px 20px;
+}
+
+.composer-text, .composer-image {
+    width: 48%;
+}
+
+.composer-text h3 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.composer-text p {
+    font-size: 1.2em;
+    color: #ddd;
+    line-height: 1.6em;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #ccc;
+    margin-top: 40px;
+}
+
+/* 애니메이션 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .composer-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .composer-text, .composer-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .portfolio {
+        grid-template-columns: 1fr;
+    }
+}
