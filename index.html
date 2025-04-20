@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>음악 포트폴리오</title>
+  <title>So-Real(소리얼) 엔터</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -23,7 +23,6 @@
       width: 100%;
     }
 
-    /* 인트로 섹션 */
     #welcome {
       position: relative;
       height: 100vh;
@@ -74,12 +73,11 @@
       background: #ff1e2d;
     }
 
-    /* 메인 콘텐츠 */
     #main {
       position: relative;
       display: none;
       padding: 4rem 1rem;
-      background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+      background: url('https://images.unsplash.com/photo-1563841930606-67e2bce48b78?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
       background-size: cover;
     }
 
@@ -102,7 +100,7 @@
     }
 
     .card {
-      background: rgba(44, 47, 54, 0.7); /* 반투명 배경만 */
+      background: rgba(30, 30, 30, 0.7); /* 고급 회색 반투명 배경 */
       border-radius: 12px;
       padding: 1rem;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
@@ -168,9 +166,9 @@
   <section id="welcome">
     <div class="overlay"></div>
     <div class="content">
-      <h1>🎵 Welcome to Our Music World</h1>
-      <p>감각적인 사운드로 감정을 디자인합니다.</p>
-      <button onclick="enterSite()">Enter</button>
+      <h1>🎵 Welcome to SoReal(소리얼) World</h1>
+      <p>Artist 매력에 날개를 달아 드립니다.</p>
+      <button onclick="enterSite()">리스트 보기</button>
     </div>
   </section>
 
@@ -178,10 +176,18 @@
   <section id="main">
     <div class="overlay"></div>
     <div class="main-content">
+
+      <!-- Production 원칙 카드 -->
+      <div class="card" style="margin-bottom: 3rem;">
+        <h2>🎯 Production Principles</h2>
+        <p>우리는 사운드의 본질을 탐색하며, 감성적이면서도 대중적인 트로트 콘텐츠를 창조합니다.<br>
+        정직한 사운드, 깊이 있는 메시지, 그리고 유니크한 스타일이 우리의 기준입니다.</p>
+      </div>
+
       <div class="portfolio-grid">
 
         <!-- 카드 1 -->
-        <div class="card" style="background: rgba(255, 153, 102, 0.7);">
+        <div class="card">
           <img src="https://i.imgur.com/W2mD9RP.jpg" alt="Track 1 이미지">
           <h3>Track 1: Nostalgia</h3>      
           <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay"
@@ -189,14 +195,14 @@
         </div>
 
         <!-- 카드 2 -->
-        <div class="card" style="background: rgba(86, 204, 242, 0.7);">
+        <div class="card">
           <img src="https://i.imgur.com/jT7rYhV.jpg" alt="Track 2 이미지">
           <h3>Track 2: Dreamscape</h3>
           <iframe width="100%" height="315" src="https://www.youtube.com/embed/QrSWJhX8vuI" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <!-- 카드 3 -->
-        <div class="card" style="background: rgba(196, 113, 245, 0.7);">
+        <div class="card">
           <img src="https://i.imgur.com/2DlJ3VQ.jpg" alt="Track 3 이미지">
           <h3>Track 3: Rhythm Rush</h3>
           <iframe width="100%" height="166" scrolling="no" frameborder="no"
@@ -204,7 +210,7 @@
         </div>
 
         <!-- 카드 4 -->
-        <div class="card" style="background: rgba(242, 153, 74, 0.7);">
+        <div class="card">
           <img src="https://i.imgur.com/d1JGR7K.jpg" alt="Track 4 이미지">
           <h3>Track 4: Sunset Vibes</h3>
           <iframe width="100%" height="315" src="https://www.youtube.com/embed/A2zKARkpDW4" frameborder="0" allowfullscreen></iframe>
