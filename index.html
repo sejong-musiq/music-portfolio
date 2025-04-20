@@ -100,7 +100,7 @@
     }
 
     .card {
-      background: rgba(30, 30, 30, 0.7); /* 고급 회색 반투명 배경 */
+      background: rgba(30, 30, 30, 0.7);
       border-radius: 12px;
       padding: 1rem;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
@@ -120,7 +120,13 @@
 
     .card h3 {
       margin-bottom: 0.5rem;
-      color: #ff6f61;
+      color: #fcd34d; /* 고급스러운 금색 */
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #ddd;
+      margin-bottom: 1rem;
     }
 
     .card iframe {
@@ -132,6 +138,16 @@
     .about {
       margin-top: 4rem;
       text-align: center;
+    }
+
+    .about a {
+      color: #4fc3f7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .about a:hover {
+      text-decoration: underline;
     }
 
     .about img {
@@ -162,66 +178,60 @@
 </head>
 <body>
 
-  <!-- 인트로 페이지 -->
   <section id="welcome">
     <div class="overlay"></div>
     <div class="content">
-      <h1>🎵 Welcome to SoReal(소리얼) World</h1>
+      <h1>🎵 Welcome to<br>SoReal(소리얼) World</h1>
       <p>Artist 매력에 날개를 달아 드립니다.</p>
       <button onclick="enterSite()">리스트 보기</button>
     </div>
   </section>
 
-  <!-- 메인 포트폴리오 -->
   <section id="main">
     <div class="overlay"></div>
     <div class="main-content">
 
-      <!-- Production 원칙 카드 -->
       <div class="card" style="margin-bottom: 3rem;">
-        <h2>🎯 Production Principles</h2>
-        <p>우리는 사운드의 본질을 탐색하며, 감성적이면서도 대중적인 트로트 콘텐츠를 창조합니다.<br>
-        정직한 사운드, 깊이 있는 메시지, 그리고 유니크한 스타일이 우리의 기준입니다.</p>
+        <h2>🎯SoReal Production 원칙</h2>
+        <p>1. 귀와 마음에 꽂히는 음악<br>2. 공연할 맛이 나는 음악<br>3. 아티스트의 매력을 끌어내주는 유니크한 스타일<br>
+        바로 소리얼의 기준입니다.</p>
       </div>
 
       <div class="portfolio-grid">
 
-        <!-- 카드 1 -->
         <div class="card">
-          <img src="https://i.imgur.com/W2mD9RP.jpg" alt="Track 1 이미지">
-          <h3>Track 1: Nostalgia</h3>      
+          <h3>Style 1: 1분1초가 모잘라</h3>
+          <p>오랜만에 술자리에 참석하여 깊은 해방감을 느끼는 그녀! 신데렐라 처럼 점점 집에 가야하는 시간이 다가오는데..</p>
           <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1734890244&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
         </div>
 
-        <!-- 카드 2 -->
         <div class="card">
-          <img src="https://i.imgur.com/jT7rYhV.jpg" alt="Track 2 이미지">
-          <h3>Track 2: Dreamscape</h3>
+          <h3>Style 2: 콧노래</h3>
+          <p>옛날 고향 후배를 만났지만 먹고살기 바빠 회포를 풀지못하고 다음으로 미루는데..</p>
           <iframe width="100%" height="315" src="https://www.youtube.com/embed/QrSWJhX8vuI" frameborder="0" allowfullscreen></iframe>
         </div>
 
-        <!-- 카드 3 -->
         <div class="card">
-          <img src="https://i.imgur.com/2DlJ3VQ.jpg" alt="Track 3 이미지">
-          <h3>Track 3: Rhythm Rush</h3>
+          <h3>Style 3: 또그러네</h3>
+          <p>아이구 이인간 또그러네 저 또 그러네~~ 그래도 넌 내 남자야!</p>
           <iframe width="100%" height="166" scrolling="no" frameborder="no"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/987654321&color=%23ff5500&auto_play=false"></iframe>
         </div>
 
-        <!-- 카드 4 -->
         <div class="card">
-          <img src="https://i.imgur.com/d1JGR7K.jpg" alt="Track 4 이미지">
-          <h3>Track 4: Sunset Vibes</h3>
+          <h3>Style 4: 형이라 불러</h3>
+          <p>평소에 어려워서 말 못했는데.. 형이라고 불러도 될까요?</p>
           <iframe width="100%" height="315" src="https://www.youtube.com/embed/A2zKARkpDW4" frameborder="0" allowfullscreen></iframe>
         </div>
 
       </div>
 
       <div class="about">
-        <h2>🎹 About Our Team</h2>
-        <p>우리는 다양한 장르를 넘나들며 감정을 이끌어내는 사운드를 제작하는 팀입니다.</p>
-        <img src="https://i.imgur.com/OY5jQdk.jpg" alt="Team Image">
+        <h2>🎹 About SoReal(소리얼) Team</h2>
+        <p>대표작곡가<br><a href="tel:01089551395">김영선 : 010-8955-1395</a></p>
+        <p>Director<br><a href="tel:01047410379">박세종 : 010-4741-0379</a></p>
+        <img src="https://i.imgur.com/syAnCua.jpeg" alt="Team Image">
       </div>
     </div>
   </section>
