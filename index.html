@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>So-Real(소리얼) 엔터</title>
+  <title>Trot proposal_YoungSound</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -17,6 +18,8 @@
       background: #1d1e22;
       color: #fff;
       overflow-x: hidden;
+      font-size: 20px;
+      line-height: 1.6;
     }
 
     section {
@@ -38,7 +41,7 @@
     #welcome .overlay {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.6);
       z-index: 1;
     }
 
@@ -46,21 +49,22 @@
       position: relative;
       z-index: 2;
       padding: 2rem;
+      margin-top: 100px;
     }
 
     #welcome h1 {
-      font-size: 3rem;
+      font-size: 48px;
       margin-bottom: 1rem;
     }
 
     #welcome p {
-      font-size: 1.2rem;
+      font-size: 20px;
       margin-bottom: 2rem;
     }
 
     #welcome button {
       padding: 1rem 2rem;
-      font-size: 1rem;
+      font-size: 18px;
       background: #ff5e62;
       border: none;
       border-radius: 8px;
@@ -119,12 +123,13 @@
     }
 
     .card h3 {
+      font-size: 22px;
       margin-bottom: 0.5rem;
-      color: #fcd34d; /* 고급스러운 금색 */
+      color: #ffe066;
     }
 
     .card p {
-      font-size: 0.9rem;
+      font-size: 22px;
       color: #ddd;
       margin-bottom: 1rem;
     }
@@ -138,6 +143,16 @@
     .about {
       margin-top: 4rem;
       text-align: center;
+    }
+
+    .about h2 {
+      font-size: 24px;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      font-size: 22px;
+      margin: 0.5rem 0;
     }
 
     .about a {
@@ -156,6 +171,24 @@
       margin-top: 1rem;
     }
 
+    #kakao-share-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 18px;
+      background-color: #fae100;
+      color: #3c1e1e;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    #kakao-share-button:hover {
+      background-color: #f2d400;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -167,11 +200,23 @@
     }
 
     @media (max-width: 600px) {
-      #welcome h1 {
-        font-size: 2rem;
+      body {
+        font-size: 16px;
       }
-      .card iframe {
-        height: 200px;
+      #welcome h1 {
+        font-size: 36px;
+      }
+      #welcome p {
+        font-size: 18px;
+      }
+      .card p {
+        font-size: 20px;
+      }
+      .about h2 {
+        font-size: 20px;
+      }
+      .about p {
+        font-size: 16px;
       }
     }
   </style>
@@ -181,9 +226,9 @@
   <section id="welcome">
     <div class="overlay"></div>
     <div class="content">
-      <h1>🎵 Welcome to<br>SoReal(소리얼) World</h1>
-      <p>Artist 매력에 날개를 달아 드립니다.</p>
-      <button onclick="enterSite()">리스트 보기</button>
+      <h1>🎵 Young Sound Contents 제안</h1>
+      <p>“가수님의 매력을 담은 트로트,<br> 자꾸만 생각나는 노래.”<br>'공감'으로 대중을 스스로 찾아가는<br>진짜 음악을 제안 드립니다.</p>
+      <button onclick="enterSite()">컨텐츠 리스트 보기</button>
     </div>
   </section>
 
@@ -192,55 +237,76 @@
     <div class="main-content">
 
       <div class="card" style="margin-bottom: 3rem;">
-        <h2>🎯SoReal Production 원칙</h2>
-        <p>1. 귀와 마음에 꽂히는 음악<br>2. 공연할 맛이 나는 음악<br>3. 아티스트의 매력을 끌어내주는 유니크한 스타일<br>
-        바로 소리얼의 기준입니다.</p>
+        <h2>Production 전략</h2>
+        <p>1. 사람들이 찾게 만드는 노래,<br>2. 공연할 맛이 나는 좋은 음악<br>3. 가수님의 매력을 담은 노래<br>   바로 영사운드의 기준입니다.
+          <br><br>※영사운드는 AI음원을 멜로디로 차용하지 않습니다.
+          <br>※정상급 가수분들께 어울리도록 최고의 음악을 지향하고 있습니다.
+        <br>※아래 중에서 관심있으신 곡 연락주시면 자세한 곡제작 기획서 송부드리오니 많은 연락 부탁 드립니다.</p>
       </div>
 
       <div class="portfolio-grid">
 
         <div class="card">
-          <h3>Style 1: 1분1초가 모잘라</h3>
-          <p>오랜만에 술자리에 참석하여 깊은 해방감을 느끼는 그녀! 신데렐라 처럼 점점 집에 가야하는 시간이 다가오는데..</p>
-          <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1734890244&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
+          <h3>남성 곡제안 1: 가즈아!</h3>
+          <p>요새는 만나면 누구나 하는얘기<br>집값, 주식, 코인 얘기 입니다.<br>내 인생은 언제 한번 필까<br>영화를 한편 본것같은 노래<br>누구나 외치는 한마디,<br>히트곡 도전!<br>"가즈아!" 컨셉입니다.<br><br>아래 노래를 전체화면으로 감상해주세요!</p>
+          <iframe width="100%" height="150" scrolling="no" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="https://www.youtube.com/embed/t3YYakZbnks"></iframe>
         </div>
 
         <div class="card">
-          <h3>Style 2: 콧노래</h3>
-          <p>옛날 고향 후배를 만났지만 먹고살기 바빠 회포를 풀지못하고 다음으로 미루는데..</p>
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/QrSWJhX8vuI" frameborder="0" allowfullscreen></iframe>
+          <h3>남성 곡제안 2: 콧노래</h3>
+          <p>공연 분위기 띄우는데 최고의 송,<br>남녀노소 누가 들어도 기분좋은 노래<br>약간의 개사로 선거송으로도 OK,<br>고향의 향기가 나는 노래,<br>콧노래 제안 드립니다. <br><br>아래 노래를 전체화면으로 감상해주세요!</p>
+          <iframe width="100%" height="150" scrolling="no" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="https://www.youtube.com/embed/2bZdPcL95AA"></iframe>
         </div>
 
         <div class="card">
-          <h3>Style 3: 또그러네</h3>
-          <p>아이구 이인간 또그러네 저 또 그러네~~ 그래도 넌 내 남자야!</p>
-          <iframe width="100%" height="166" scrolling="no" frameborder="no"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/987654321&color=%23ff5500&auto_play=false"></iframe>
+          <h3>여성 곡제안 1: 말해주세요</h3>
+          <p>오랜만에 답답한 집에서 벗어나 술자리에 참석하여 멋진 해방감을 느끼는 그녀!<br>신데렐라처럼 점점 집에 가야하는 시간이 다가오는데..<br>시티팝 느낌의 트렌디한 트로트, 히트곡을 지향합니다. <br><br>아래 노래를 전체화면으로 감상해주세요!</p>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/iN7CIFLCNHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
         <div class="card">
-          <h3>Style 4: 형이라 불러</h3>
-          <p>평소에 어려워서 말 못했는데.. 형이라고 불러도 될까요?</p>
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/A2zKARkpDW4" frameborder="0" allowfullscreen></iframe>
+          <h3>여성 곡제안 2: 또그러네</h3>
+          <p>대한민국 여성의 답답함을 대표하며!<br>시원~하게 속한번 푸는 노래<br>살면서 답답할때 이노래 생각나면<br>재미지게 부르면서 풀어내는 노래<br>야심차게 준비했습니다! <br><br>아래 노래를 전체화면으로 감상해주세요!</p>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/E0CK84gvcPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-
       </div>
 
       <div class="about">
-        <h2>🎹 About SoReal(소리얼) Team</h2>
-        <p>대표작곡가<br><a href="tel:01089551395">김영선 : 010-8955-1395</a></p>
-        <p>Director<br><a href="tel:01047410379">박세종 : 010-4741-0379</a></p>
-        <img src="https://i.imgur.com/syAnCua.jpeg" alt="Team Image">
+        <h2>🎹 영사운드 Team</h2>
+        <p>대표 프로듀서<br><a href="tel:01089551395">김영선 : 010-8955-1395</a></p>
+        <p>Art Director<br><a href="tel:01047410379">박세종 : 010-4741-0379</a></p>
+        <p>※가사, 멜로디, 템포등에 대해 모두 가수님께 맞춰서 수정 가능합니다.</p>
+        <p>※카카오톡, 전화연락 통해서 연락 부탁 드립니다.</p>
+        <img src="https://i.postimg.cc/rmYPcMk9/ys.jpg" alt="Team Image">
       </div>
+
+      <div style="text-align: center;">
+        <button id="kakao-share-button">카카오톡으로 공유하기</button>
+      </div>
+
     </div>
   </section>
 
   <script>
+    Kakao.init('1288413091185ec74a903fbf99281040');
+    document.getElementById('kakao-share-button').addEventListener('click', function() {
+      Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '트로트곡 제안서',
+          description: '영사운드에서 제안드리는 매력 트로트 컨셉 확인하기',
+          imageUrl: 'https://i.postimg.cc/rmYPcMk9/ys.jpg',
+          link: { mobileWebUrl: window.location.href, webUrl: window.location.href }
+        },
+        buttons: [
+          { title: '바로 보기', link: { mobileWebUrl: window.location.href, webUrl: window.location.href } }
+        ]
+      });
+    });
+
     function enterSite() {
       const welcome = document.getElementById('welcome');
       const main = document.getElementById('main');
-
       welcome.style.animation = 'fadeOut 0.8s forwards';
       setTimeout(() => {
         welcome.style.display = 'none';
@@ -249,6 +315,5 @@
       }, 800);
     }
   </script>
-
 </body>
 </html>
