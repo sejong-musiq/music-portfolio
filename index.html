@@ -171,6 +171,39 @@
       margin-top: 1rem;
     }
 
+    .yt-vertical-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 177.78%; /* 9:16 비율 (세로 영상) */
+      overflow: hidden;
+    }
+
+    .yt-vertical-wrapper .yt-vertical {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .yt-horizontal-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 비율 */
+      overflow: hidden;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    .yt-horizontal-wrapper .yt-horizontal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
     #kakao-share-button {
       display: inline-block;
       margin-top: 2rem;
@@ -236,47 +269,61 @@
     <div class="overlay"></div>
     <div class="main-content">
 
-      <div class="card" style="margin-bottom: 3rem;">
-        <h2>Production 전략</h2>
-        <p>1. 사람들이 찾게 만드는 노래,<br>2. 공연할 맛이 나는 좋은 음악<br>3. 가수님의 매력을 담은 노래<br>   바로 영사운드의 기준입니다.
-          <br><br>※영사운드는 AI음원을 멜로디로 차용하지 않습니다.
-          <br>※정상급 가수분들께 어울리도록 최고의 음악을 지향하고 있습니다.
-        <br>※아래 중에서 관심있으신 곡 연락주시면 자세한 곡제작 기획서 송부드리오니 많은 연락 부탁 드립니다.</p>
-      </div>
-
       <div class="portfolio-grid">
 
         <div class="card">
           <h3>남성 곡제안 1: 가즈아!</h3>
-          <p>요새는 만나면 누구나 하는얘기<br>집값, 주식, 코인 얘기 입니다.<br>내 인생은 언제 한번 필까<br>영화를 한편 본것같은 노래<br>누구나 외치는 한마디,<br>히트곡 도전!<br>"가즈아!" 컨셉입니다.<br><br>아래 노래를 전체화면으로 감상해주세요!</p>
-          <iframe width="100%" height="150" scrolling="no" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="https://www.youtube.com/embed/t3YYakZbnks"></iframe>
+          <p>요새는 만나면 누구나 하는얘기<br>집값, 주식, 코인 얘기 입니다.<br>내 인생은 언제 한번 필까<br>영화를 한편 본것같은 노래<br>누구나 외치는 한마디,<br>히트곡 도전!<br>"가즈아!" 컨셉입니다.</p>
+          <iframe width="100%" height="170" scrolling="no" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="https://www.youtube.com/embed/zQEZB97KBwo"></iframe>
         </div>
 
         <div class="card">
           <h3>남성 곡제안 2: 콧노래</h3>
-          <p>공연 분위기 띄우는데 최고의 송,<br>남녀노소 누가 들어도 기분좋은 노래<br>약간의 개사로 선거송으로도 OK,<br>고향의 향기가 나는 노래,<br>콧노래 제안 드립니다. <br><br>아래 노래를 전체화면으로 감상해주세요!</p>
-          <iframe width="100%" height="150" scrolling="no" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="https://www.youtube.com/embed/2bZdPcL95AA"></iframe>
+          <p>공연 분위기 띄우는데 최고의 송,<br>남녀노소 누가 들어도 기분좋은 노래<br>약간의 개사로 선거송으로도 OK,<br>가수님 팬분들께 드리는 편지로,<br>콧노래 제안 드립니다.</p>
+          <iframe width="100%" height="170" scrolling="no" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen src="https://www.youtube.com/embed/W8OPhUDy7xQ"></iframe>
         </div>
 
         <div class="card">
           <h3>여성 곡제안 1: 말해주세요</h3>
-          <p>오랜만에 답답한 집에서 벗어나 술자리에 참석하여 멋진 해방감을 느끼는 그녀!<br>신데렐라처럼 점점 집에 가야하는 시간이 다가오는데..<br>시티팝 느낌의 트렌디한 트로트, 히트곡을 지향합니다. <br><br>아래 노래를 전체화면으로 감상해주세요!</p>
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/iN7CIFLCNHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <p>오랜만에 답답한 집에서 벗어나 술자리에 참석하여 멋진 해방감을 느끼는 그녀!<br>신데렐라처럼 점점 집에 가야하는 시간이 다가오는데..<br>시티팝 느낌의 트렌디한 트로트, 히트곡을 지향합니다.</p>
+          <div class="yt-vertical-wrapper">
+          <iframe class="yt-vertical"
+                  src="https://www.youtube.com/embed/iN7CIFLCNHs"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+          </div>
         </div>
 
         <div class="card">
           <h3>여성 곡제안 2: 또그러네</h3>
-          <p>대한민국 여성의 답답함을 대표하며!<br>시원~하게 속한번 푸는 노래<br>살면서 답답할때 이노래 생각나면<br>재미지게 부르면서 풀어내는 노래<br>야심차게 준비했습니다! <br><br>아래 노래를 전체화면으로 감상해주세요!</p>
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/E0CK84gvcPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <p>대한민국 여성의 답답함을 대표하며!<br>시원~하게 속한번 푸는 노래<br>살면서 답답할때 이노래 생각나면<br>재미지게 부르면서 풀어내는 노래<br>야심차게 준비했습니다! <br></p>
+          <div class="yt-vertical-wrapper">
+          <iframe class="yt-vertical"
+                  src="https://www.youtube.com/embed/E0CK84gvcPg"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+          </div>
         </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 3rem;">
+        <h2>Production 전략</h2>
+        <p>1. 사람들이 찾게 만드는 노래<br>2. 공연할 맛이 나는 좋은 음악<br>3. 가수님의 매력을 담은 노래<br>   바로 영사운드의 기준입니다.
+          <br><br>※영사운드는 AI음원을 멜로디로 차용하지 않습니다.
+          <br>※정상급 가수분들께 어울리도록 최고의 음악을 지향하고 있습니다.
+        <br>※아래 중에서 관심있으신 곡 연락주시면 자세한 곡제작 기획서 송부드리오니 많은 연락 부탁 드립니다.</p>
       </div>
 
       <div class="about">
         <h2>🎹 영사운드 Team</h2>
         <p>대표 프로듀서<br><a href="tel:01089551395">김영선 : 010-8955-1395</a></p>
         <p>Art Director<br><a href="tel:01047410379">박세종 : 010-4741-0379</a></p>
-        <p>※가사, 멜로디, 템포등에 대해 모두 가수님께 맞춰서 수정 가능합니다.</p>
-        <p>※카카오톡, 전화연락 통해서 연락 부탁 드립니다.</p>
+        <p>※제목, 가사, 멜로디, 템포등 모두 가수님께 맞춰 수정 가능합니다.</p>
+        <p>※카카오톡, 문자나 전화 통해서 편하게 연락 주세요.</p>
         <img src="https://i.postimg.cc/rmYPcMk9/ys.jpg" alt="Team Image">
       </div>
 
